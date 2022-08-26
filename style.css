@@ -127,7 +127,7 @@ hr {
     vertical-align: bottom;
     margin-bottom: 25%;
     position: relative;
-    margin-top: 5%;
+    margin-top: 4%;
  }
 
  #new-fav-img {
@@ -145,7 +145,8 @@ hr {
     position:absolute;
     /* bottom:0;
     margin-bottom: 25%; */
-    z-index: -1;
+    z-index: -2;
+    margin-top: 7.5%;
  }
 
  .gen-box {
@@ -156,9 +157,21 @@ hr {
     color: white;
  }
 
- #frame {
+ #foil {
     width: 200px;
     height: 200px;
+    z-index: -1;
+    position: absolute;
+    margin-top: 7.5%;
+    mix-blend-mode: hard-light;
+ }
+
+ #frame {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 5%;
+    /* color:#82240c; */
+    /* mix-blend-mode: hard-light; */
  }
 
  #trait-box {

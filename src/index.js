@@ -212,38 +212,39 @@ function assignPortrait() {
 // Dice Rolling Function
 
 function rollStats() {
-	const options = {
-		method: 'GET',
-		headers: {
-			'X-RapidAPI-Key': '7c36118751msh411ebf7605a21d9p15665djsne9a3ef934253',
-			'X-RapidAPI-Host': 'dice-roll.p.rapidapi.com'
-		}
-	}
-	fetch('https://dice-roll.p.rapidapi.com/roll/6/d/10', options)
-		.then(response => response.json())
-		.then(response => {
-			let strScr = document.querySelector('#Str-Scr');
-			let dexScr = document.querySelector('#Dex-Scr');
-			let conScr = document.querySelector('#Con-Scr');
-			let intScr = document.querySelector('#Int-Scr');
-			let winScr = document.querySelector('#Wis-Scr');
-			let chaScr = document.querySelector('#Cha-Scr');
+	// const options = {
+	// 	method: 'GET',
+	// 	headers: {
+	// 		'X-RapidAPI-Key': '7c36118751msh411ebf7605a21d9p15665djsne9a3ef934253',
+	// 		'X-RapidAPI-Host': 'dice-roll.p.rapidapi.com'
+	// 	}
+	// }
+	// fetch('https://dice-roll.p.rapidapi.com/roll/6/d/10', options)
+	// 	.then(response => response.json())
+	// 	.then(response => {
+	let strScr = document.querySelector('#Str-Scr');
+	let dexScr = document.querySelector('#Dex-Scr');
+	let conScr = document.querySelector('#Con-Scr');
+	let intScr = document.querySelector('#Int-Scr');
+	let winScr = document.querySelector('#Wis-Scr');
+	let chaScr = document.querySelector('#Cha-Scr');
 
-			currentCharacterRolls = [response.rolls[0] + 8, response.rolls[1] + 8, response.rolls[2] + 8, response.rolls[3] + 8, response.rolls[4] + 8, response.rolls[5] + 8]
+	currentCharacterRolls = [randomNumberGen(8,18), randomNumberGen(8,18), randomNumberGen(8,18), randomNumberGen(8,18), randomNumberGen(8,18), randomNumberGen(8,18)]
 
-			strScr.textContent = currentCharacterRolls[0];
-			dexScr.textContent = currentCharacterRolls[1];
-			conScr.textContent = currentCharacterRolls[2];
-			intScr.textContent = currentCharacterRolls[3];
-			winScr.textContent = currentCharacterRolls[4];
-			chaScr.textContent = currentCharacterRolls[5];
+			// currentCharacterRolls = [response.rolls[0] + 8, response.rolls[1] + 8, response.rolls[2] + 8, response.rolls[3] + 8, response.rolls[4] + 8, response.rolls[5] + 8]
 
-			console.log(currentCharacterRolls);
+	strScr.textContent = currentCharacterRolls[0];
+	dexScr.textContent = currentCharacterRolls[1];
+	conScr.textContent = currentCharacterRolls[2];
+	intScr.textContent = currentCharacterRolls[3];
+	winScr.textContent = currentCharacterRolls[4];
+	chaScr.textContent = currentCharacterRolls[5];
 
-			
-		})
-		.catch(err => console.error(err));
+			// console.log(currentCharacterRolls);			
 }
+// )
+		// .catch(err => console.error(err));
+// }
 
 
 
@@ -371,30 +372,5 @@ function desireGenerator() {
 	// console.log(currentCharacterDesires);
 }
 
-
-
-
-
-
-
-/*
-
-wishlist function 
-
-generator function 
-	[ x ] - calls on random character race  [0-8]
-	[ x ] - calls on random character gender [0-1]
-	[ x ] - random name (gender male random number) [0-5]
-	[ x ] - calls on random character traits [0-12]
-	[ x ] - calls on random character desires [0-19]
-	- takes the race and gender and generates an appropriate portrait 
-	- something that calls on dice and assigns it the 6 scores
-
-
-function favoriter 
-
-function unfavorite 
-
-*/ 
 
 
